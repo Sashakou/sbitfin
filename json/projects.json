@@ -1,0 +1,22 @@
+{
+	"1":{"number_id":"1","parent":"0","name":"Сеть посуточной аренди","curr":"UAH"},
+	"2":{"number_id":"2","parent":"1","name":"Біла Церква","curr":"UAH"},
+	"3":{"number_id":"3","parent":"2","name":"Об.1 2Славина","curr":"UAH"},
+	"4":{"number_id":"4","parent":"2","name":"Об.2 Павличенка","curr":"UAH"},
+	"5":{"number_id":"5","parent":"2","name":"Об.3 Некрасова","curr":"UAH"},
+	"6":{"number_id":"6","parent":"2","name":"Об.4 Маяк","curr":"UAH"},
+	"7":{"number_id":"7","parent":"2","name":"Об.5 Нова","curr":"UAH"},
+	"8":{"number_id":"8","parent":"2","name":"Об.6 Чуйкова","curr":"UAH"},
+	"9":{"number_id":"9","parent":"2","name":"Об.7 Курсовая 3а","curr":"UAH"},
+	"10":{"number_id":"10","parent":"2","name":"Об.8 Славина 10","curr":"UAH"},
+	"11":{"number_id":"11","parent":"2","name":"Об.9 Восточная","curr":"UAH"},
+	"12":{"number_id":"12","parent":"2","name":"Об.9 Таращаньска","curr":"UAH"},
+	"13":{"number_id":"13","parent":"2","name":"Камин","curr":"UAH"},
+	"14":{"number_id":"14","parent":"2","name":"Об.10 Фастовская2","curr":"UAH"},
+	"15":{"number_id":"15","parent":"2","name":"Об.2 24Фастівська","curr":"UAH"},
+	"16":{"number_id":"16","parent":"2","name":"Ярослава Мудрого","curr":"UAH"},
+	"17":{"number_id":"17","parent":"2","name":"Декабристов5","curr":"UAH"},
+	"18":{"number_id":"18","parent":"1","name":"Прага","curr":"CZK"},
+	"19":{"number_id":"19","parent":"18","name":"Snejna","curr":"CZK"},
+	"20":{"number_id":"20","parent":"18","name":"Lipova","curr":"CZK"}
+}

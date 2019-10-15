@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SBIT-Finance</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker.min.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> 
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<ul class="menu">
+			<li class="menu-item">
+				<span class="login">Вход / Регистрация</span>
+			</li>
+		</ul>
+	</header>
+	<div id="wrapper">
+		<div class="list_filter">
+			<div class="cover-list_filter"></div>
+		</div>
+		<div class="working-block">
+			<section class="transaction income">
+				<div class="tabs">
+					<div class="tabs_item tabs_item-active" transaction="income">Доходы</div>
+					<div class="tabs_item" transaction="expence">Расходы</div>
+					<div class="tabs_item" transaction="transfer">Перевод</div>
+				</div>	
+				<div class="tabs_content">
+					<!-- <div class="tabs_content_item tabs_content_item-active" data-id="1" >
+						<div class="cover_income_block">
+							<div class="expense_item">
+								<div class="title_expense">
+									<span>Проект</span>
+								</div>
+								<div class="cover_input_expense title_project">
+								</div>
+							</div>
+							<div class="expense_item">
+								<div class="title_expense">
+									<span>Оплата</span>
+								</div>
+								<div class="inner_cover_expense">
+									<div class="cover_input_expense">
+										<div class="block-expense_item">
+											<span class="expense_item-span">Счет</span>
+											<select id="project-main" name="project">
+												<option value="Кеш">Кеш</option>
+												<option value="Карточка">Карточка</option>
+											</select>
+										</div>
+										<div class="block-expense_item">
+											<span class="expense_item-span">Теги</span>
+											<select id="category" name="payment-money">
+												<option value="Пусто"></option>
+							        			<option value="Зарплата">Зарплата</option>
+							        			<option value="Комунальные">Комунальные</option>
+							        			<option value="Ремонт">Ремонт</option>
+							        			<option value="Интернет">Интернет</option>
+							        		</select>
+										</div>
+										<div class="block-expense_item">
+											<span class="expense_item-span">Сума</span>
+											<div class="cover-price">
+												<input id="sum" type="text">
+												<select id="common-expense" name="payment-money">
+								        			<option value="UAH">UAH</option>
+								        			<option value="USD">USD</option>
+								        			<option value="EUR">EUR</option>
+								        			<option value="CZK">CZK</option>
+								        		</select>
+											</div>
+										</div>
+										<div class="block-expense_item">
+											<span class="expense_item-span">Дата</span>
+											<input class="" type="text" id="calendar_income">
+										</div>
+									</div>
+									<div class="cover_input_expense curse">
+										<div class="block-expense_item">
+											<span class="expense_item-span">
+												<span class="common-expense-base">UAH</span>
+												/
+												<span class="common-expense">UAH</span><span> = <span class="course"></span></span>
+											</span>
+											<input class="style_in_cur input_expense_res" id="rate" type="text" name="" value="">
+										</div>
+										<div class="block-expense_item">
+							        		<span class="expense_item-span">
+												<span class="common-expense">UAH</span>
+												/
+												<span class="common-expense-base">UAH</span>
+											</span>
+											<input class="style_in_cur input_expense_res" id="rev_rate" type="text" name="" value="">
+										</div>
+										<div class="block-expense_item">
+											<span class="expense_item-span">Сумма в <span class="common-expense-base">UAH</span></span>
+											<input class="style_in_cur input_expense_res" id="sum_base" type="text" name="" value="">
+										</div>
+									</div>	
+								</div>
+							</div>
+							<div class="expense_item">
+								<div class="title_expense">
+									<span>Описание</span>
+								</div>
+								<div class="cover_input_expense">
+									<textarea name="" id="description" cols="" rows=""></textarea>
+								</div>
+							</div>
+							<div class="expense_item"></div>
+						</div>
+						<button id="btn_restab">Добавить платеж</button>
+					</div> -->
+					<div id="tab_costs" class="tabs_content_item tabs_content_item-active" transaction="income">
+						<div class="cover_expense_block">
+							<div class="expense_item">
+								<div class="title_expense">
+									<span>Проект</span>
+								</div>
+								<div class="cover_input_expense title_project">
+								</div>
+							</div>
+							<div class="expense_item">
+								<div class="title_expense">
+									<span>Оплата</span>
+								</div>
+								<div class="inner_cover_expense">
+									<div class="cover_input_expense">
+										<div class="block-expense_item" transaction="expence">
+											<span class="expense_item-span">Со счета</span>
+											<select id="project-main" name="project">
+												<option value="Кеш">Кеш</option>
+												<option value="Карточка">Карточка</option>
+											</select>
+										</div>
+										<div class="block-expense_item block_trans-act" transaction="income">
+											<span class="expense_item-span">На счет</span>
+											<select id="project-main" name="project">
+												<option value="Кеш">Кеш</option>
+												<option value="Карточка">Карточка</option>
+											</select>
+										</div>
+										<div class="block-expense_item">
+											<span class="expense_item-span">Теги</span>
+											<!-- <input class="" type="text" id="category"> -->
+											<select id="category" name="payment-money">
+												<option value="Пусто"></option>
+							        			<option value="Зарплата">Зарплата</option>
+							        			<option value="Комунальные">Комунальные</option>
+							        			<option value="Ремонт">Ремонт</option>
+							        			<option value="Интернет">Интернет</option>
+							        		</select>
+										</div>
+										<div class="block-expense_item">
+											<span class="expense_item-span">Сума</span>
+											<div class="cover-price">
+												<input id="sum" type="text">
+												<select id="common-expense" name="payment-money">
+								        			<option value="UAH">UAH</option>
+								        			<option value="USD">USD</option>
+								        			<option value="EUR">EUR</option>
+								        			<option value="CZK">CZK</option>
+								        		</select>
+											</div>
+										</div>
+										<div class="block-expense_item">
+											<span class="expense_item-span">Дата</span>
+											<input class="" type="text" id="calendar">
+										</div>
+									</div>
+									<div class="cover_input_expense curse">
+										<div class="block-expense_item">
+											<span class="expense_item-span">
+												<span class="common-expense-base">UAH</span>
+												/
+												<span class="common-expense">UAH</span><span> = <span class="course"></span></span>
+											</span>
+											<input class="style_in_cur input_expense_res" id="rate" type="text" name="" value="">
+										</div>
+										<div class="block-expense_item">
+							        		<span class="expense_item-span">
+												<span class="common-expense">UAH</span>
+												/
+												<span class="common-expense-base">UAH</span>
+											</span>
+											<input class="style_in_cur input_expense_res" id="rev_rate" type="text" name="" value="">
+										</div>
+										<div class="block-expense_item">
+											<span class="expense_item-span">Сумма в <span class="common-expense-base">UAH</span></span>
+											<input class="style_in_cur input_expense_res" id="sum_base" type="text" name="" value="">
+										</div>
+									</div>	
+								</div>
+							</div>
+							<div class="expense_item">
+								<div class="title_expense">
+									<span>Описание</span>
+								</div>
+								<div class="cover_input_expense">
+									<textarea name="" id="description" cols="" rows=""></textarea>
+								</div>
+							</div>
+							<div class="expense_item"></div>
+						</div>
+						<button id="btn_restab">Добавить платеж</button>
+					</div>
+					<!-- <div class="tabs_content_item" data-id="3" >Перевод</div> -->
+				</div>	
+			</section>
+			<section class="cover-data-result">
+				<div class="cover-column-header">
+					<div class="column-data-header">
+						<span>Дата:</span>
+					</div>
+					<div class="cover-table-header">
+						<div class="table-header">
+							<div class="tablet-item">Проект:</div>
+							<div class="tablet-item">Описание:</div>
+							<div class="tablet-item">Счет:</div>
+							<div class="tablet-item">Теги:</div>
+							<div class="tablet-item">Сума:</div>
+						</div>
+					</div>
+				</div>
+				<div id="main_container_table"></div>	
+			</section>
+			<div id="refuge">
+				<div class="data-result-row">
+				    <div class="column-data">
+						<span></span>
+					</div>
+				    <div class="cover_tab_project">       
+						<div class="table-result-row">
+							<div class="main_table">
+								
+							</div>
+							<div class="edit_block">
+								<div class="edit_block_item" id="edit">Редактировать</div>
+								<div class="edit_block_item" id="remove">Удалить</div>
+							</div>
+							<div class="edit_box">
+								<div class="cover_edit_expense_block">
+									<div class="expense_item">
+										<div class="title_expense">
+											<span>Проект</span>
+										</div>
+										<div class="cover_input_expense title_project_edit">
+											<!-- <span class="project_empty">Проект невыбран</span> -->
+											<!-- <input id="edit_title_project" type="text"> -->
+										</div>
+									</div>
+									<div class="expense_item">
+										<div class="title_expense">
+											<span>Оплата</span>
+										</div>
+										<div class="inner_cover_expense">
+											<div class="cover_input_expense">
+												<!--test-->
+												<div class="block-expense_item" transaction="expence">
+													<span class="expense_item-span">Со счета</span>
+													<select id="project-main" name="project">
+														<option value="Кеш">Кеш</option>
+														<option value="Карточка">Карточка</option>
+													</select>
+												</div>
+												<div class="block-expense_item block_trans-act" transaction="income">
+													<span class="expense_item-span">На счет</span>
+													<select id="project-main" name="project">
+														<option value="Кеш">Кеш</option>
+														<option value="Карточка">Карточка</option>
+													</select>
+												</div>
+												<!--test-->
+												
+												<!-- <div class="block-expense_item">
+													<span class="expense_item-span">Счет</span>
+													<select id="project-main" name="project">
+														<option value="Кеш">Кеш</option>
+														<option value="Карточка">Карточка</option>
+													</select>
+												</div> -->
+
+
+												<div class="block-expense_item">
+													<span class="expense_item-span">Теги</span>
+													<!-- <input class="" type="text" id="category"> -->
+													<select id="category" name="payment-money">
+														<option value="Пусто"></option>
+									        			<option value="Зарплата">Зарплата</option>
+									        			<option value="Комунальные">Комунальные</option>
+									        			<option value="Ремонт">Ремонт</option>
+									        			<option value="Интернет">Интернет</option>
+									        		</select>
+												</div>
+												<div class="block-expense_item">
+													<span class="expense_item-span">Сума</span>
+													<div class="cover-price">
+														<input id="sum" type="text">
+														<select id="common-expense" name="payment-money">
+										        			<option value="UAH">UAH</option>
+										        			<option value="USD">USD</option>
+										        			<option value="EUR">EUR</option>
+										        			<option value="CZK">CZK</option>
+										        		</select>
+													</div>
+												</div>
+												<div class="block-expense_item">
+													<span class="expense_item-span">Дата</span>
+													<input class="" type="text" id="calendar_edit">
+												</div>
+											</div>
+											<div class="cover_input_expense curse">
+												<div class="block-expense_item">
+													<span class="expense_item-span">
+														<span class="common-expense-base">UAH</span>
+														/
+														<!-- <span class="common-expense_edit">EUR</span> -->
+														<span class="common-expense_edit">UAH</span><span> = <span class="course"></span></span>
+													</span>
+													<input class="style_in_cur input_expense_res" id="rate" type="text" name="" value="">
+												</div>
+												<div class="block-expense_item">
+									        		<span class="expense_item-span">
+														<span class="common-expense_edit">EUR</span>
+														/
+														<span class="common-expense-base">UAH</span>
+													</span>
+													<input class="style_in_cur input_expense_res" id="rev_rate" type="text" name="" value="">
+												</div>
+												<div class="block-expense_item">
+													<span class="expense_item-span">Сумма в <span class="common-expense-base">UAH</span></span>
+													<input class="style_in_cur input_expense_res" id="sum_base" type="text" name="" value="">
+												</div>
+											</div>	
+										</div>
+									</div>
+									<div class="expense_item">
+										<div class="title_expense">
+											<span>Описание</span>
+										</div>
+										<div class="cover_input_expense">
+											<textarea name="" id="description" cols="" rows=""></textarea>
+										</div>
+									</div>
+								</div>
+								<button id="save">Сохранить</button>
+								<button id="cancel">Отмена</button>
+							</div>
+					    </div>
+				    </div>				
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mymodal" class="under_popup">
+        <div class="cover_modal">
+          	<div class="popup">
+            	<span class="close_popup"></span>
+	            <h3>Авторизация</h3>
+	            <form class="form" id="form" name="form">
+	              <input class="input_text" type="text" name="name" placeholder="Логин"><br>
+	              <input class="input_text" type="phone" name="phone" placeholder="Пароль"><br>
+	              <input class="but"  value="Войти">
+	              <input class="registration"  value="Зарегистрироваться">
+	            </form>
+        	</div>
+        </div>
+    </div>
+</body>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	
+	<script src="js/main.js"></script>
+</html>

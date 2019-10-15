@@ -1,0 +1,6 @@
+{
+	"1":{"number_id":"20","name":"Lipova","price":"43","curr_pay":"UAH","description":"Белком плата","category":"Интернет","project_main":"Кеш","transaction":"income","date":"04-04-2019"},
+	"2":{"number_id":"2","name":"Біла Церква","price":"67","curr_pay":"USD","description":"Бла бла бла ","category":"Зарплата","project_main":"Карточка","transaction":"expence","date":"04-23-2019","cover_price_base":{"price_base":"1749.3473","common_expense_base":"UAH","rate":"26.1132","rev_rate":"0.0383"}},
+	"3":{"number_id":"5","number_id_second":"6","name":"Об.3 Некрасова","name_second":"Об.4 Маяк","price":"52","curr_pay":"EUR","description":"Ла ла ла","category":"Комунальные","from_project_main":"Карточка","to_project_main":"Кеш","transaction":"transfer","date":"04-22-2019","cover_price_base":{"price_base":"1749.5844","common_expense_base":"UAH","rate":"29.3643","rev_rate":"0.0341"}},
+	"4":{"number_id":"16","name":"Ярослава Мудрого","price":"100","curr_pay":"USD","description":"Бла бла бла бла","category":"Ремонт","project_main":"Кеш","transaction":"income","date":"04-23-2019","cover_price_base":{"price_base":"2702.7027","common_expense_base":"UAH","rate":"27","rev_rate":"0.037"}}
+}
